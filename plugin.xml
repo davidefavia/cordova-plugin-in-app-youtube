@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-in-app-youtube"
+    version="1.0.0">
+    <name>Cordova Plugin in app YouTube</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/davidefavia/cordova-plugin-in-app-youtube.git</repo>
+    <issue>https://github.com/davidefavia/cordova-plugin-in-app-youtube/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+        <clobbers target="InAppYouTube" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="InAppYouTube">
+          <param name="android-package" value="com.davidefavia.InAppYouTube" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+      <source-file src="src/android/com/davidefavia/InAppYouTube.java" target-dir="src/com/davidefavia/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+        <clobbers target="InAppYouTube" />
+      </js-module>
+      <config-file target="config.xml" parent="/*">
+        <feature name="InAppYouTube">
+          <param name="ios-package" value="InAppYouTube" onload="true" />
+        </feature>
+      </config-file>
+      <!-- http://stackoverflow.com/a/34963435 -->
+      <config-file platform="ios" target="*-Info.plist" parent="LSApplicationQueriesSchemes" mode="add">
+        <array>
+          <string>youtube</string>
+        </array>
+      </config-file>
+      <header-file src="src/ios/InAppYouTube.h" />
+      <source-file src="src/ios/InAppYouTube.m" />
+    </platform>
+</plugin>
