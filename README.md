@@ -11,7 +11,7 @@ This plugin has been tested with Cordova 6.5.0, Android 7.1.1 and iOS 10.3.
 Install via Cordova:
 
 ```
-$ cordova plugin install https://github.com/davidefavia/cordova-plugin-in-app-youtube
+$ cordova plugin add https://github.com/davidefavia/cordova-plugin-in-app-youtube
 ```
 
 ## Reference
@@ -26,8 +26,8 @@ It opens a YouTube video.
 |-|:-:|:-:|-|
 |videoId|string||YouTube video identifier, _e.g._ `9bZkp7q19f0`.|
 |options|object|{}|Use `fullscreen = true` to enable fullscreen.|
-|successCallback|function|function() {}|Returns plugin result object with videoId, options and type key. type can be `application` or `webview` depending on which application opened the video.|
-|errorCallback|function|function() {}|Returns error or exception message.|
+|successCallback|function|function() {}|Plugin returns result object with `videoId` (string), `options` (object) and `type` (string) key. `type` can be `application` or `webview` depending on which application opened the video.|
+|errorCallback|function|function() {}|Plugin returns error or exception message (string).|
 
 Platforms have different behaviors.
 
