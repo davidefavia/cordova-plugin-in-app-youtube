@@ -1,11 +1,11 @@
 {
   "name": "cordova-plugin-in-app-youtube",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "cordova": {
     "id": "cordova-plugin-in-app-youtube",
     "platforms": [
       "android",
-      "ios",
+      "ios"
     ]
   },
   "description": "Open YouTube video in app"

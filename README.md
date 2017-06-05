@@ -44,7 +44,7 @@ Platforms have different behaviors.
 
 ## Example
 
-```js
+```html
 <!DOCTYPE html>
 <html>
   <head>
